@@ -1,0 +1,10 @@
+C:\Users\IvicaCelig\Documents\Visual Studio 2017\FSpam\FSpam\FSpam\bin\Debug\FSpam.exe.config
+C:\Users\IvicaCelig\Documents\Visual Studio 2017\FSpam\FSpam\FSpam\bin\Debug\FSpam.exe
+C:\Users\IvicaCelig\Documents\Visual Studio 2017\FSpam\FSpam\FSpam\bin\Debug\FSpam.pdb
+C:\Users\IvicaCelig\Documents\Visual Studio 2017\FSpam\FSpam\FSpam\obj\Debug\FSpam.csprojAssemblyReference.cache
+C:\Users\IvicaCelig\Documents\Visual Studio 2017\FSpam\FSpam\FSpam\obj\Debug\FSpam.Form1.resources
+C:\Users\IvicaCelig\Documents\Visual Studio 2017\FSpam\FSpam\FSpam\obj\Debug\FSpam.Properties.Resources.resources
+C:\Users\IvicaCelig\Documents\Visual Studio 2017\FSpam\FSpam\FSpam\obj\Debug\FSpam.csproj.GenerateResource.cache
+C:\Users\IvicaCelig\Documents\Visual Studio 2017\FSpam\FSpam\FSpam\obj\Debug\FSpam.csproj.CoreCompileInputs.cache
+C:\Users\IvicaCelig\Documents\Visual Studio 2017\FSpam\FSpam\FSpam\obj\Debug\FSpam.exe
+C:\Users\IvicaCelig\Documents\Visual Studio 2017\FSpam\FSpam\FSpam\obj\Debug\FSpam.pdb
