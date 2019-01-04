@@ -32,7 +32,12 @@ namespace FSpam
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             MailLoader mail = new MailLoader();
-            mail.readMail();
+            mail.readMail(txtUsername.Text,txtPassword.Text);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
