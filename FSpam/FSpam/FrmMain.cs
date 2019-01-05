@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace FSpam
 {
-    public partial class Form1 : Form
+    public partial class FrmMain : Form
     {
-        public Form1()
+        public FrmMain()
         {
             InitializeComponent();
         }
@@ -33,6 +33,12 @@ namespace FSpam
         {
             MailLoader mail = new MailLoader();
             mail.readMail(txtUsername.Text,txtPassword.Text);
+
+            if(mail.zastavica != 0)
+            {
+                FrmMails formMails = new FrmMails(mail.titles, mail.summaries, mail.senders);
+                formMails.ShowDialog();
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
