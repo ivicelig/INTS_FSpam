@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classifier\BayesClassifier.cs" />
+    <Compile Include="classifier\TokenLoader.cs" />
     <Compile Include="FrmMails.cs">
       <SubType>Form</SubType>
     </Compile>

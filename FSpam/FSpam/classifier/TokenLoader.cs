@@ -11,9 +11,6 @@ namespace FSpam.classifier
         public void LoadTokens(List<String> SetATokens, System.Collections.Generic.List<String> SetBTokens)
         {
 
-
-
         }
     }
-}
 }
