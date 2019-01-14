@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="classifier\BayesClassifier.cs" />
     <Compile Include="classifier\TokenLoader.cs" />
+    <Compile Include="data\readFiles.cs" />
     <Compile Include="FrmMails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +95,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1_Jj-Xzp0sIkUg23HOqzZF4w.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spamMail.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

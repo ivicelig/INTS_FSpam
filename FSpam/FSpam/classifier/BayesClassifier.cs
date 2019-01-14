@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 namespace FSpam.classifier
 {
-    class BayesClassifier<T>
+    class BayesClassifier
     {
         private int MaxInterestingTokenCount = int.MaxValue;
-        private Dictionary<T, double> Probabilities { get; set; }
+        private Dictionary<String, double> Probabilities { get; set; }
         TokenLoader tokenLoader = new TokenLoader();
-        public double CalculateProbabilityOfTokens(System.Collections.Generic.List<T> Items)
+        public double CalculateProbabilityOfTokens(System.Collections.Generic.List<String> Items)
         {
             SortedList<string, double> SortedProbabilities = new SortedList<string, double>();
             for (int x = 0; x < Items.Count; ++x)

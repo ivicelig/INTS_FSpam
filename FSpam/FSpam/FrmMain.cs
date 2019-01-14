@@ -1,4 +1,5 @@
-﻿using FSpam.mail;
+﻿using FSpam.data;
+using FSpam.mail;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,6 +32,7 @@ namespace FSpam
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            readFiles.getTokensFromFolder(@"C:\Users\IvicaCelig\Documents\Visual Studio 2017\FSpam\FSpam\FSpam\DataSet\ham"); 
             MailLoader mail = new MailLoader();
             mail.readMail(txtUsername.Text,txtPassword.Text);
 
