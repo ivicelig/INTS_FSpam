@@ -23,7 +23,6 @@ namespace FSpam.mail
                 string title;
                 string content;
                 string name;
-               
                 XmlDocument doc = new XmlDocument();
 
                 objClient.Credentials = new System.Net.NetworkCredential(username,password);

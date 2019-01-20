@@ -48,7 +48,7 @@
   <ItemGroup>
     <Compile Include="classifier\BayesClassifier.cs" />
     <Compile Include="classifier\TokenLoader.cs" />
-    <Compile Include="data\readFiles.cs" />
+    <Compile Include="dataLoader\readFiles.cs" />
     <Compile Include="FrmMails.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FSpam.classifier;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +16,7 @@ namespace FSpam
         private List<string> titles;
         private List<string> summaries;
         private List<string> senders;
-
+        private BayesClassifier bayesClassifier;
         DataTable dt = new DataTable();
 
         public FrmMails(List<string> titl, List<string> summary, List<string> authors)
@@ -25,6 +26,7 @@ namespace FSpam
             titles = titl;
             summaries = summary;
             senders = authors;
+            bayesClassifier = new BayesClassifier();
         }
 
         private void FrmMails_Load(object sender, EventArgs e)
@@ -37,18 +39,29 @@ namespace FSpam
             for(int i=0; i<titles.Count; i++)
             {
                 DataRow row = dt.NewRow();
+                Tuple<double, string> tuple = bayesClassifier.CalculateProbabilityOfTokens(summaries[i].Split(' ').ToList());
 
                 row["Pošiljatelj"] = senders[i];
                 row["Naslov"] = titles[i];
-
-                //dodati još vrijednosti za bayesa i spam
+                row["Bayes vrijednost"] = tuple.Item1;
+                row["SPAM"] = tuple.Item2;
 
                 dt.Rows.Add(row);
             }
             
+
             dgvMails.DataSource = dt;
             dgvMails.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dgvMails.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dgvMails.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+
+            foreach (DataGridViewRow row in dgvMails.Rows)
+            {
+                if(row.Cells[3].Value.ToString() == "DA")
+                {
+                    row.DefaultCellStyle.BackColor = Color.Red;
+                }
+            }
         }
 
         private void dgvMails_CellContentClick(object sender, DataGridViewCellEventArgs e)
